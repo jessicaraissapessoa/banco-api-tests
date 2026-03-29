@@ -1,7 +1,7 @@
 const request = require('supertest')
 const { expect } = require('chai')
 require('dotenv').config()
-const { postLogin } = require('../fixtures/postLogin.json')
+const postLogin = require('../fixtures/postLogin.json')
 
 describe('Login', () => {
     describe('POST /login', () => {
@@ -13,7 +13,6 @@ describe('Login', () => {
                 .post('/login')
                 .set('Content-Type', 'application/json')
                 .send(bodyLogin)
-                })
 
             //console.log(resposta.status)
             //console.log(resposta.body)
